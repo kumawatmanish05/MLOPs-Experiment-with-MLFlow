@@ -1,0 +1,203 @@
+# 🚀 End-to-End MLOps Workflow (MLflow + DagsHub)
+
+## 📌 Project Overview
+
+This project demonstrates a complete MLOps pipeline including:
+
+* Experiment Tracking (MLflow)
+* Remote Logging & Collaboration (DagsHub)
+* Model Training & Evaluation
+* Artifact Management
+
+---
+
+# 🧱 Step 1: Project Structure
+
+```
+project/
+│
+├── src/
+│   ├── file1.py        # ML training + MLflow logging
+│   ├── file2.py        # DagsHub initialization
+│
+├── data/
+├── models/
+├── params.yaml
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# ⚙️ Step 2: Install Dependencies
+
+```bash
+pip install mlflow dagshub scikit-learn matplotlib seaborn
+```
+
+---
+
+# 🔬 Step 3: Setup MLflow (Local Tracking)
+
+## Start MLflow Server
+
+```bash
+mlflow server \
+--backend-store-uri sqlite:///mlflow.db \
+--default-artifact-root ./mlruns \
+--host 127.0.0.1 \
+--port 5000
+```
+
+## Set Tracking URI in Code
+
+```python
+import mlflow
+mlflow.set_tracking_uri("http://127.0.0.1:5000")
+```
+
+---
+
+# 🧪 Step 4: Train Model + Log to MLflow
+
+```python
+with mlflow.start_run():
+    
+    # Train model
+    model.fit(X_train, y_train)
+
+    # Predictions
+    y_pred = model.predict(X_test)
+
+    # Metrics
+    mlflow.log_metric("accuracy", accuracy)
+
+    # Parameters
+    mlflow.log_param("n_estimators", 100)
+
+    # Artifacts
+    mlflow.log_artifact("confusion_matrix.png")
+
+    # Model logging
+    mlflow.sklearn.log_model(model, name="model")
+```
+
+---
+
+# 🌐 Step 5: Connect with DagsHub
+
+## Initialize DagsHub
+
+```python
+import dagshub
+
+dagshub.init(
+    repo_owner="your_username",
+    repo_name="your_repo",
+    mlflow=True
+)
+```
+
+👉 This automatically:
+
+* Connects MLflow to DagsHub
+* Sets remote tracking URI
+* Enables online experiment tracking
+
+---
+
+# 🔑 Step 6: Authentication
+
+### Option 1 (Browser Login)
+
+* Automatically opens browser
+* Login to DagsHub
+
+### Option 2 (Token - Recommended)
+
+```python
+dagshub.init(
+    repo_owner="your_username",
+    repo_name="your_repo",
+    mlflow=True,
+    token="YOUR_TOKEN"
+)
+```
+
+---
+
+# 🔄 Step 7: Run Pipeline
+
+```bash
+python src/file1.py
+```
+
+---
+
+# 📊 Step 8: View Results
+
+## Local MLflow UI
+
+```
+http://127.0.0.1:5000
+```
+
+## DagsHub UI
+
+```
+https://dagshub.com/<username>/<repo>
+```
+
+---
+
+# 🧩 (Optional) Step 9: Add DVC
+
+## Initialize DVC
+
+```bash
+dvc init
+```
+
+## Track Data
+
+```bash
+dvc add data/data.csv
+git add data/data.csv.dvc .gitignore
+git commit -m "Track data with DVC"
+```
+
+---
+
+# 🔥 Final Architecture
+
+```
+        Code (Python)
+              ↓
+        MLflow Tracking
+              ↓
+    Local Server (SQLite + mlruns)
+              ↓
+        DagsHub (Remote UI)
+              ↓
+     DVC (Data Versioning)
+```
+
+---
+
+# 🎯 Key Benefits
+
+* ✔ Experiment Tracking
+* ✔ Model Versioning
+* ✔ Remote Collaboration
+* ✔ Reproducibility
+* ✔ Production-ready workflow
+
+---
+
+# 🚀 Next Steps
+
+* Add FastAPI for deployment
+* Add CI/CD (GitHub Actions)
+* Add Airflow for scheduling
+
+---

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/413458476927237754/648928b5f72d4d5b9d9e87ac45fffcf7/artifacts
+end_time: 1773912171109
+entry_point_name: ''
+experiment_id: '413458476927237754'
+lifecycle_stage: active
+run_id: 648928b5f72d4d5b9d9e87ac45fffcf7
+run_name: gentle-goat-279
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1773912163246
+status: 3
+tags: []
+user_id: Dell
