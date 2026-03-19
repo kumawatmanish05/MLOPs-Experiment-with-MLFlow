@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/413458476927237754/de9e1b69628b481db8283851eb5bacd1/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '413458476927237754'
+lifecycle_stage: active
+run_id: de9e1b69628b481db8283851eb5bacd1
+run_name: salty-mule-948
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1773905689367
+status: 1
+tags: []
+user_id: Dell

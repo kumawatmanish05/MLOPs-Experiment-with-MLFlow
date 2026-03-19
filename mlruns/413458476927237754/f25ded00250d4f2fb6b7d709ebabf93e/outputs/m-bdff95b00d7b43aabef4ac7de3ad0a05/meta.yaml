@@ -1,0 +1,6 @@
+destination_id: m-bdff95b00d7b43aabef4ac7de3ad0a05
+destination_type: MODEL_OUTPUT
+source_id: m-bdff95b00d7b43aabef4ac7de3ad0a05
+source_type: RUN_OUTPUT
+step: 0
+tags: {}
