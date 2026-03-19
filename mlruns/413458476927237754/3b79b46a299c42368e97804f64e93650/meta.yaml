@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/413458476927237754/3b79b46a299c42368e97804f64e93650/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '413458476927237754'
+lifecycle_stage: active
+run_id: 3b79b46a299c42368e97804f64e93650
+run_name: incongruous-wolf-417
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1773902619627
+status: 1
+tags: []
+user_id: Dell

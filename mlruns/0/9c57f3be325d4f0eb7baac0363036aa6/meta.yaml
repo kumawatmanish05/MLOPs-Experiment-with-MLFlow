@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/9c57f3be325d4f0eb7baac0363036aa6/artifacts
+end_time: 1773902387011
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9c57f3be325d4f0eb7baac0363036aa6
+run_name: debonair-moose-780
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1773902382582
+status: 4
+tags: []
+user_id: Dell

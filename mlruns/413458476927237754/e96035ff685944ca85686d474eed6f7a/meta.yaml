@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/413458476927237754/e96035ff685944ca85686d474eed6f7a/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '413458476927237754'
+lifecycle_stage: active
+run_id: e96035ff685944ca85686d474eed6f7a
+run_name: colorful-moth-339
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1773902917779
+status: 1
+tags: []
+user_id: Dell
