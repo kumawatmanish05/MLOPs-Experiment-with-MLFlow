@@ -1,5 +1,5 @@
 # MLOPs-Experiment-with-MLFlow
-This repo has a complete demonstration of performing experiment tracking using mlflow.
+This repo has a complete demonstration of performing experiment tracking using mlflow..
 
 
 MLflow is a powerful tool for tracking and managing machine learning experiments. Here’s a list of things that can be tracked/logged using MLflow, which you can include in your tutorial documentation:
